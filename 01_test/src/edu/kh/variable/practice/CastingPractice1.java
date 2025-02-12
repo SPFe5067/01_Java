@@ -9,15 +9,15 @@ public class CastingPractice1 {
 		float fNum = 3.0f;
 		double dNum = 2.5;
 		char ch = 'A';
-		System.out.println( iNum1 % iNum2 ); // 2
+		System.out.println( iNum1 / iNum2 ); // 2
 		System.out.println( (int)dNum ); // 2
 		System.out.println( iNum2 * dNum ); // 10.0
-		System.out.println( (double)iNum1 ); // 10.0
+		System.out.println( (float)iNum1 ); // 10.0
 		System.out.println( (double)iNum1 / iNum2 ); // 2.5
 		System.out.println( dNum ); // 2.5
 		System.out.println( (int)fNum ); // 3
-		System.out.println( iNum1 / (int)fNum ); // 3
-		System.out.println( iNum1 / fNum );// 3.3333333
+		System.out.println( iNum1 / fNum ); // 3
+		System.out.println( (float)iNum1 / fNum );// 3.3333333
 		//float : 소수점 아래 8번째 자리까지 연산 후 반올림
 		//float은 23비트까지만 저장할 수 있어서 근사값이 빨리 끊어지고 반올림됨 => 정밀도가 낮아 마지막 값이 3
 		//float 비트 수 : 32bit
