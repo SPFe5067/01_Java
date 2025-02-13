@@ -8,7 +8,7 @@ public class ConditionExempleRun {
 	public static void main(String[] args) {
 		
 		ConditionExemple condition = new ConditionExemple();
-		condition.test1();
+		condition.ex8();
 		
 		
 		
