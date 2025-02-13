@@ -32,7 +32,7 @@ public class Practice1 {
 		int i = sc.nextInt();
 		
 		if(i < 0) {
-			System.out.println("짝수만 입력해주세요.");
+			System.out.println("양수만 입력해주세요.");
 		}else if(i%2 == 0) {
 			System.out.println("짝수입니다.");
 		}else {
@@ -61,7 +61,7 @@ public class Practice1 {
 		String result;
 		
 		
-		if(a < 40 || b < 40 || c < 40 || (a+b+c)/3 < 60) {
+		if(a < 40 && b < 40 && c < 40 && (a+b+c)/3 < 60) {
 			System.out.println("불합격 입니다.");
 		}else {
 			System.out.println("국어 : " + a);
@@ -124,25 +124,28 @@ public class Practice1 {
 	정상체중
 	 */
 		
-	System.out.println("키(m)을 입력해 주세요 : ");
+	System.out.print("키(m)을 입력해 주세요 : ");
 	double a = sc.nextDouble();
-	System.out.println("몸무게(kg)을 입력해 주세요 : ");
+	System.out.print("몸무게(kg)을 입력해 주세요 : ");
 	double b = sc.nextDouble();
 	
 	double q = b / (a * a);
 	
-	if(q >=30 ) {System.out.println("BMI 지수 : " + q);
+	System.out.println("BMI 지수 : " + q);
+	
+	if(q >=30 ) {
 	System.out.println("고도비만");
-	}else if(q >= 25) {System.out.println("BMI 지수 : " + q);
+	
+	}else if(q >= 25) {
 	System.out.println("비만");
 		
-	}else if(q >= 23) {System.out.println("BMI 지수 : " + q);
+	}else if(q >= 23) {
 	System.out.println("과체중");
 		
-	}else if(q >= 18.5) {System.out.println("BMI 지수 : " + q);
+	}else if(q >= 18.5) {
 	System.out.println("정상체중");
 		
-	}else {System.out.println("BMI 지수 : " + q);
+	}else {
 	System.out.println("저체중");
 		
 	}
@@ -179,34 +182,41 @@ public class Practice1 {
 		System.out.println("출석 횟수 : ");
 		int d = sc.nextInt();
 		
-		double a1 = (a * 0.2);	
-		double b1 = (b * 0.3);
-		double c1 = (c * 0.3);
-		double d1 = (d);
+		double a1 = (a * 0.2);	// a *= 0.2; // a *= (int) a * 0.2
+		double b1 = (b * 0.3);	// b *= 0.3; // b *= (int) b * 0.3
+		double c1 = (c * 0.3);	// c *= 0.3; // c *= (int) c * 0.3
 		
-		double o = (a1 + b1 + c1 + d1);
+		double o = (a1 + b1 + c1 + d);
 		
 		String result = "Pass";
 		
 
 
-		System.out.println("============결과=============");
-		System.out.println("중간고사 점수(20) : " + a1);
-		System.out.println("기말고사 점수(30) : " + b1);
-		System.out.println("과제 점수 (30) : " + c1);
-		System.out.println("출석 점수 (20) : " + d);
-		System.out.println("총점 : " + o);
 		
 		
-		if(o < 70) {
-			System.out.println("Fail [점수 미달]");
-			
-		}else if(d < (20 * 0.7)) {
+		
+		
+		if(d < (20 * 0.7)) {
+			System.out.println("============결과=============");
 			System.out.println("Fail [출석횟수 부족 (" + d + "/20)]");
+
+		}else if(o < 70) {
+			System.out.println("Fail [점수 미달]");
+			System.out.println("============결과=============");
+			System.out.printf("중간고사 점수(20) : %.1f \n" ,  a1);
+			System.out.printf("기말고사 점수(30) : %.1f \n" ,  b1);
+			System.out.printf("과제 점수 (30) : %.1f \n" ,  c1);
+			System.out.println("출석 점수 (20) : " + d);
+			System.out.println("총점 : " + o);
 			
 		}else if(o > 70 || d > (20 * 0.7)){
 			System.out.println(result);
-			
+			System.out.println("============결과=============");
+			System.out.printf("중간고사 점수(20) : %.1f \n" ,  a1);
+			System.out.printf("기말고사 점수(30) : %.1f \n" ,  b1);
+			System.out.printf("과제 점수 (30) : %.1f \n" ,  c1);
+			System.out.println("출석 점수 (20) : " + d);
+			System.out.println("총점 : " + o);
 		}	
 		
 		
