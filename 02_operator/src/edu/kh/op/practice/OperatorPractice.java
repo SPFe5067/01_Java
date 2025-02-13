@@ -174,15 +174,16 @@ public class OperatorPractice {
 		int oM = hM / 50000; // 5만원짜리 지폐 갯수
 		//hM = hM % 50000;
 		hM %= 50000; //복합대입연산자 (% 와 = 를 합쳐 사용)
+		System.out.println("나머지 : " + hM);
 		
-		int ilM = hM / 100000;
-		ilM %= 100000;
+		int ilM = hM / 10000;
+		hM %= 10000;
 		
 		int fC = hM / 5000;
-		fC %= 5000;
+		hM %= 5000;
 		
 		int ilC = hM / 1000;
-		ilC %= 1000;
+		hM %= 1000;
 		
 		System.out.println("50000원 : " + oM);
 		System.out.println("10000원 : " + ilM);
@@ -218,4 +219,5 @@ public class OperatorPractice {
 			
 		}
 
+		
 }
