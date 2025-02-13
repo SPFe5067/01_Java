@@ -139,25 +139,83 @@ public class OperatorPractice {
 			 */
 			
 			Scanner sc = new Scanner(System.in);
+			
 			System.out.println("가격을 입력하세요 : ");
 			int q = sc.nextInt();
-			System.out.println("멤버십이 있으세요? (있으면 true / 없으면 false 입력) : " );
-			boolean t = true;
-			boolean f = !t;
-			String w = sc.next();
-			System.out.println("할인을 포함한 최종금액 : " + (q * 0.9));
 			
-			System.out.println();
-			System.out.println();
-			
-			System.out.println("가격을 입력하세요 : ");
-			int e = sc.nextInt();
 			System.out.println("멤버십이 있으세요? (있으면 true / 없으면 false 입력) : " );
-			String r = sc.next();
-			System.out.println("할인을 포함한 최종금액 : " + (e * 0.95));
+			boolean t = sc.nextBoolean();
+
+			double result =  t == true ? (q * 0.9) : (q * 0.95);
+
+			System.out.println("할인을 포함한 최종금액 : " + result);
+			System.out.println("할인율 :  " + (q - result)) ;
+			
 			
 			
 			
 			
 		}
+
+		public void practice5() {
+			
+	/*
+	 * ATM에서 사용자가 원하는 금액을 입력하면, 5만원, 1만원, 5천원, 1천원 단위로
+	 *  최소 개수의 지폐로 돈을 인출하라
+	ex) 사용자가 123000원을 입력하면, 5만원 지폐 2장, 1만원 지폐 2장, 5천원 지폐 0장,
+       1천원 지폐 3장이 필요함
+	 */
+			
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("출금할 금액 입력 : ");
+		int hM = sc.nextInt();
+		
+		int oM = hM / 50000; // 5만원짜리 지폐 갯수
+		//hM = hM % 50000;
+		hM %= 50000; //복합대입연산자 (% 와 = 를 합쳐 사용)
+		
+		int ilM = hM / 100000;
+		ilM %= 100000;
+		
+		int fC = hM / 5000;
+		fC %= 5000;
+		
+		int ilC = hM / 1000;
+		ilC %= 1000;
+		
+		System.out.println("50000원 : " + oM);
+		System.out.println("10000원 : " + ilM);
+		System.out.println("5000원 : " + fC);
+		System.out.println("1000원 : " + ilC);
+		
+		
+		
+		
+		
+			
+		}
+
+		public void practice6() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("첫 번째 수 : ");
+			int i1 = sc.nextInt();
+			
+			System.out.print("두 번째 수 : ");
+			int i2 = sc.nextInt();
+			
+			String result = i1 % i2 == 0 ? "배수입니다" : "배수가 아닙니다";
+			
+			System.out.println(result);
+			
+			
+			
+			
+			
+			
+			
+		}
+
 }
