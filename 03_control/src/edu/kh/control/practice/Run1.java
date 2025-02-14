@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Run1 {
 	public static void main(String[] args) {
 		
-		Practice1 practice = new Practice1();
-				practice.test5();
+		Test1 practice = new Test1();
+				practice.tests3();
 				
 	}
 }
