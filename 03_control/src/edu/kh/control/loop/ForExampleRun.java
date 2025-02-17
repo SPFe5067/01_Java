@@ -5,8 +5,11 @@ public class ForExampleRun {
 
 	public static void main(String[] args) {
 		
-		ForExampleTest example = new ForExampleTest();
-		example.hell();
+		WhileExample wE = new WhileExample();
+		wE.ex3();{
+			
+		}
+		
 		
 		
 	}
