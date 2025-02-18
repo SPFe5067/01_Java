@@ -306,10 +306,11 @@ public class ArrayExample1 {
 		String str = sc.nextLine();
 		
 		char[] arr = new char[str.length()];
-		String input = sc.nextLine();
+
+		
 		
 		for(int i = 0; i < arr.length; i++) {
-			arr[i] = input.charAt(i);
+			arr[i] = str.charAt(i);
 		}
 		
 		System.out.println(Arrays.toString(arr));
@@ -336,6 +337,46 @@ public class ArrayExample1 {
 		
 		
 	}
-	
+	public void testsolo() {
+		//문자열을 입력받아 한글자씩 잘라내어
+				//char배열에 순서대로 저장.
+				//문자 하나를 입력받아 일치하는 문자가 char 배열에 몇개 존재하는지 확인
+				//단 일치하는 문자가 없을 경우 존재하지않음 출려
+				
+				//배열 검색
+				//문자열의 길이 : String.length();
+				//String.charAt(index) : 문자열에서 특정 index에 위치한 문자 하나를 얻어옴.
+				//count
+		
+		
+		int count = 0;
+		
+		System.out.print("문장 입력 : ");
+		String str = sc.nextLine();
+		
+		char[] arr = new char[str.length()];
+		
+		
+		
+		System.out.print("문자 입력 : ");
+		char ch = sc.next().charAt(0);
+		
+		for(int i = 0; i <str.length(); i++) {
+			arr[i]=str.charAt(i);
+			
+			if(arr[i] == ch) {
+				count++;
+				
+			}
+			
+		}
+		if(count > 0) {
+			System.out.println(count + "개 중복.");
+		}else {
+			System.out.println("중복 없음.");
+		}
+		
+		
+	}
 	
 }
