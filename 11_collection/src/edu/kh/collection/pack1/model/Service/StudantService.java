@@ -100,6 +100,7 @@ public class StudantService {
 			
 			System.out.print("번호 선택 : ");
 			
+			
 			try {
 			menuNum = sc.nextInt();
 			sc.nextLine();
